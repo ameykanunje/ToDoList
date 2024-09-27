@@ -62,9 +62,7 @@ class TaskCell: UITableViewCell {
     }
     
     @objc private func didTapCheckbox() {
-        checkbox.isSelected.toggle() // Toggle the checkbox state
-        // Notify that the checkbox state has changed
-        // You can use delegation or closure for this, or leave it as is if handled in the ViewController
+        checkbox.isSelected.toggle() 
     }
     
     func configure(task: ToDoListItem) {

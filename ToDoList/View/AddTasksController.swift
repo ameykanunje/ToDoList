@@ -20,7 +20,7 @@ class TaskAdder {
         }
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { _ in
+        alert.addAction(UIAlertAction(title: "Confirm & Save", style: .default, handler: { _ in
             guard let fields = alert.textFields, fields.count == 2 else { return }
             
             let nameField = fields[0]

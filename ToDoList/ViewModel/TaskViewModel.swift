@@ -38,10 +38,10 @@ class TasksViewModel {
     }
     
     func toggleTaskCompletion(task: ToDoListItem){
-        task.isCompleted.toggle() // Toggle the completion state
+        task.isCompleted.toggle()
         
         do {
-            try context.save() // Save the updated task state
+            try context.save()
             getAllTask()
         } catch {
             print("Error \(error.localizedDescription)")

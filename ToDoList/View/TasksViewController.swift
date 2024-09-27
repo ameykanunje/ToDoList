@@ -13,12 +13,8 @@ class TasksViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Set up View
         setupUI()
-        
-        //fetch initial tasks
         viewModel.getAllTask()
-        
         tableView.reloadData()
     }
     
@@ -46,11 +42,11 @@ class TasksViewController: UIViewController{
     
     @objc private func didTapAdd() {
         TaskAdder.presentAddTaskAlert(on: self) { [weak self] name, details in
-            // Add the task using ViewModel
+            
             self?.viewModel.createTask(name: name, details: details)
 
-            // Reload the tableView after adding a task
-            self?.viewModel.getAllTask()  // Fetch the updated list
+            
+            self?.viewModel.getAllTask()
             self?.tableView.reloadData()
         }
     }
@@ -83,9 +79,9 @@ extension TasksViewController: UITableViewDataSource, UITableViewDelegate {
             tableView.reloadData()
     }
     
-    // Optionally, handle cell selection if you need
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        // Perform any action on task selection if needed
+        
     }
 }
