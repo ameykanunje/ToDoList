@@ -41,7 +41,7 @@ class TasksViewController: UIViewController{
     }
     
     @objc private func didTapAdd() {
-        TaskAdder.presentAddTaskAlert(on: self) { [weak self] name, details in
+        TaskAddView.presentAddTaskAlert(on: self) { [weak self] name, details in
             
             self?.viewModel.createTask(name: name, details: details)
 

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TaskAdder {
+class TaskAddView {
     static func presentAddTaskAlert(on viewController: UIViewController, completion: @escaping (String, String) -> Void) {
         let alert = UIAlertController(title: "New Task", message: "Enter task details", preferredStyle: .alert)
         
